@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo><head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v3.4.0"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://jc-innovation-ti.github.io/blog/git/"><!-- Primary Meta Tags --><title>Git</title><meta name="title" content="Git"><meta name="description" content="Una guía básica de Git para JC"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://jc-innovation-ti.github.io/blog/git/"><meta property="og:title" content="Git"><meta property="og:description" content="Una guía básica de Git para JC"><meta property="og:image" content="https://jc-innovation-ti.github.io/blog-placeholder-1.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://jc-innovation-ti.github.io/blog/git/"><meta property="twitter:title" content="Git"><meta property="twitter:description" content="Una guía básica de Git para JC"><meta property="twitter:image" content="https://jc-innovation-ti.github.io/blog-placeholder-1.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:white;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}footer[data-astro-cid-sz7xmlte]{padding:2em 1em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+</style></head><body data-astro-cid-bvzihdzo><header data-astro-cid-3ef6ksr2><nav data-astro-cid-3ef6ksr2><h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>JC Innovation Documentación</a></h2><div class="internal-links" data-astro-cid-3ef6ksr2><a href="/blog" data-astro-cid-3ef6ksr2 data-astro-cid-eimmu3lg>Guías</a></div></nav></header><main data-astro-cid-bvzihdzo><article data-astro-cid-bvzihdzo><div class="hero-image" data-astro-cid-bvzihdzo><img width="1020" height="510" src="../../../public/git/git-banner.png" alt="" data-astro-cid-bvzihdzo></div><div class="prose" data-astro-cid-bvzihdzo><hr data-astro-cid-bvzihdzo><h1 id="contenido">Contenido</h1>
+<ul>
+<li><a href="#contenido">Contenido</a></li>
+<li><a href="#gu%C3%ADa-b%C3%A1sica">Guía básica</a>
+<ul>
+<li><a href="#requisitos">Requisitos</a>
+<ul>
+<li><a href="#herramientas-opcionales-recomendadas">Herramientas opcionales recomendadas</a></li>
+</ul>
+</li>
+<li><a href="#conceptos-b%C3%A1sicos">Conceptos básicos</a>
+<ul>
+<li><a href="#qu%C3%A9-es-git">¿Qué es GIT?</a></li>
+<li><a href="#por-qu%C3%A9-debemos-usar-git">¿Por qué debemos usar Git?</a></li>
+<li><a href="#principales-comandos-para-trabajar-con-git">Principales comandos para trabajar con Git</a>
+<ul>
+<li><a href="#git-init">Git Init</a></li>
+<li><a href="#git-clone">Git Clone</a></li>
+<li><a href="#git-add">Git Add</a></li>
+<li><a href="#git-commit">Git Commit</a></li>
+<li><a href="#git-remote">Git Remote</a></li>
+<li><a href="#git-status">Git Status</a></li>
+<li><a href="#git-pull">Git Pull</a></li>
+<li><a href="#git-push">Git Push</a></li>
+<li><a href="#git-merge">Git Merge</a></li>
+<li><a href="#git-branch">Git Branch</a></li>
+<li><a href="#git-checkout">Git Checkout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#nomenclatura-buenas-pr%C3%A1cticas">Nomenclatura (buenas prácticas)</a>
+<ul>
+<li><a href="#nomenclatura-de-ramas">Nomenclatura de Ramas</a></li>
+<li><a href="#nomenclatura-de-commits">Nomenclatura de commits</a></li>
+</ul>
+</li>
+<li><a href="#ejercicios-pr%C3%A1cticos">Ejercicios prácticos</a>
+<ul>
+<li><a href="#iniciar-un-proyecto">Iniciar un proyecto</a>
+<ul>
+<li><a href="#inicializar-un-proyecto-desde-la-terminal-git-bash">Inicializar un proyecto desde la terminal (git bash)</a></li>
+<li><a href="#inicializar-un-proyecto-desde-vs-code">Inicializar un proyecto desde VS Code</a></li>
+<li><a href="#inicializar-un-proyecto-usando-git-tortoise">Inicializar un proyecto usando Git Tortoise</a></li>
+</ul>
+</li>
+<li><a href="#clonar-un-repositorio-existente-de-github-en-tu-m%C3%A1quina-local">Clonar un repositorio existente de GitHub en tu máquina local</a>
+<ul>
+<li><a href="#clonar-un-repositorio-existente-desde-la-terminal-git-bash">Clonar un repositorio existente desde la terminal (git Bash)</a></li>
+<li><a href="#clonar-un-repositorio-existente-desde-desde-vs-code">Clonar un repositorio existente desde desde VS Code</a></li>
+<li><a href="#clonar-un-repositorio-existente-usando-git-tortoise">Clonar un repositorio existente usando Git Tortoise</a></li>
+</ul>
+</li>
+<li><a href="#crear-una-nueva-rama">Crear una nueva rama</a></li>
+<li><a href="#a%C3%B1adir-cambios-a-una-rama--commit-">Añadir cambios a una rama ( commit )</a></li>
+<li><a href="#fusionar-rama-hija-con-rama-padre-merge">Fusionar rama hija con rama padre (merge)</a></li>
+</ul>
+</li>
+<li><a href="#git-workflow-para-jc-innovation">Git Workflow para JC-Innovation</a>
+<ul>
+<li><a href="#diagrama-general-del-flujo-de-trabajo-en-git-para-jc">Diagrama General del flujo de trabajo en GIT para JC</a></li>
+<li><a href="#1er-commit-en-main">1er commit en main</a></li>
+<li><a href="#creaci%C3%B3n-de-la-rama-dev-y-un-1er-commit-en-ella">Creación de la rama dev y un 1er commit en ella</a></li>
+<li><a href="#creaci%C3%B3n-de-subrama-de-dev-y-un-1er-commit-en-ella">Creación de subrama de dev y un 1er commit en ella</a></li>
+<li><a href="#segundo-commit-en-subrama-de-dev">Segundo commit en subrama de dev</a></li>
+<li><a href="#merge-hacia-la-rama-dev-de-addloginform">Merge hacia la rama dev de add/loginForm</a></li>
+<li><a href="#nueva-subrama-de-dev-y-commit">Nueva subrama de dev y commit</a></li>
+<li><a href="#merge-hacia-dev-de-addhomepagestyles">Merge hacia dev de add/homePageStyles</a></li>
+<li><a href="#merge-de-dev-hacia-main">Merge de dev hacia main</a></li>
+</ul>
+</li>
+<li><a href="#gu%C3%ADas-recomendadas">Guías recomendadas</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<h1 id="guía-básica">Guía básica</h1>
+<br>
+<p><strong>Hola</strong></p>
+<blockquote>
+<p>Bienvenido a este pequeño resumen sobre Git y su uso, cualquier comentario házmelo saber, espero te sirva como referencia y apoyo en el flujo de trabajo diario con Git. Gracias !</p>
+</blockquote>
+<hr>
+<br>
+<br>
+<h2 id="requisitos">Requisitos</h2>
+<br>
+<ul>
+<li>
+<p><strong>Instalar Git en tu equipo de trabajo (windows):</strong></p>
+<p><a href="https://git-scm.com/download/win">Git - Downloading Package</a></p>
+</li>
+</ul>
+<br>
+<h3 id="herramientas-opcionales-recomendadas">Herramientas opcionales recomendadas</h3>
+<br>
+<ul>
+<li>
+<p><strong>Github Desktop:</strong></p>
+<p><a href="https://desktop.github.com/">GitHub Desktop</a></p>
+</li>
+<li>
+<p><strong>Git Tortoise:</strong></p>
+<p><a href="https://tortoisegit.org/download/">Download – TortoiseGit – Windows Shell Interface to Git</a></p>
+</li>
+<li>
+<p><strong>Extensiones para VS Code:</strong></p>
+<p><img alt="extensiones"  src="/_astro/extensiones-0.5fbe1173_Z1zz9TN.webp" width="439" height="234" loading="lazy" decoding="async"></p>
+<p><img alt="extensiones"  src="/_astro/extensiones-1.024133b0_Z23gIrP.webp" width="443" height="83" loading="lazy" decoding="async"></p>
+<p><img alt="extensiones"  src="/_astro/extensiones-2.b660ed12_ZDJGOk.webp" width="446" height="69" loading="lazy" decoding="async"></p>
+</li>
+</ul>
+<hr>
+<br>
+<br>
+<h2 id="conceptos-básicos">Conceptos básicos</h2>
+<br>
+<h3 id="qué-es-git">¿Qué es GIT?</h3>
+<p><strong>Git</strong> es un software para el control de versiones, es distribuido, o sea que no se localiza en un solo servidor o repositorio, sino que en cualquier usuario que se sincronice tendrá disponible una copia de todo el código versionado a lo largo del tiempo en su máquina local.</p>
+<p>En Git se trabaja con ramas, y se pueden hacer tantas ramas como sean necesarias, son livianas así que no nos preocupamos por el peso.</p>
+<p>Git es muy bueno para código, pero no tanto para imágenes y videos.</p>
+<p>Git es excelente, es muy fácil para trabajar y colaborar en equipo.</p>
+<br>
+<h3 id="por-qué-debemos-usar-git">¿Por qué debemos usar Git?</h3>
+<p>Con Git evitamos perder nuestro trabajo o sobrescribir nuestro código y podemos tener múltiples puntos de “guardado”, y regresar a puntos anteriores si es necesario.</p>
+<p>Podremos manejar conflictos cuando varios desarrolladores trabajen sobre le mismo código.</p>
+<p>Podremos crear una rama y trabajar sobre ella (rama de desarrollo) sin miedo a mover nuestro código estable o principal (rama principal) y hacer las revisiones o correcciones necesarias antes de pasar nuestro código a la rama principal.</p>
+<br>
+<h3 id="principales-comandos-para-trabajar-con-git">Principales comandos para trabajar con Git</h3>
+<br>
+<h4 id="git-init">Git Init</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> init</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p><strong>git init</strong>  convierte al directorio actual en tu máquina local en un repositorio de Git. Es una manera de inicializar un proyecto en blanco.</p>
+<br>
+<h4 id="git-clone">Git Clone</h4>
+<p>Es un comando para hacer una copia de un repositorio específico.</p>
+<p>Ejemplo de la clonación de un repositorio existente en Github.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/github/my_repositorio.git</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Cuando clonas un repositorio, obtienes toda la información de ese repositorio, ya sea los puntos de guardado (<strong>commits</strong>) y todas las ramas existentes con sus respectivos archivos.</p>
+<p>Generalmente se hace eso una sola vez al comenzar a interactuar con un proyecto iniciado que ya exista en un repositorio remoto, como en GitHub.</p>
+<br> 
+<h4 id="git-add">Git Add</h4>
+<p>Este comando, agrega los archivos nuevos, o modificados en tu directorio de trabajo a una área llamada <strong>stage</strong> desde donde Git los reconocerá para poder agregar esos cambios a un punto de guardado o <strong>commit</strong>.</p>
+<p>Ejemplo de agregar un archivo al <strong>stage</strong>* para posteriormente realizar un punto de guardado o <strong>commit.</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> README.md</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Para agregar todos los archivos creados, modificados o borrados al área de <strong>stage</strong> se usa el siguiente comando:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>💡 <strong>git add</strong> es un comando importante, ningún cambio se podrá guardar en el repositorio sino a través de este comando. También es posible agregar varios archivos o todos los archivos modificados, incluso cuando se eliminan archivos, <strong>git add</strong> prepara esa información para el posterior <strong>commit.</strong></p>
+<br> 
+<h4 id="git-commit">Git Commit</h4>
+<p><strong>git commit</strong> crea un punto de guardado, que es como una fotografía instantánea de todo un proyecto.  Se realizan cuando quieres agregar nuevos archivos o archivos modificados, eliminados, pero que consideres que es un cambio necesario y “estable” a incorporar a la rama actual de trabajo.  Estos puntos de guardado o <strong>commits</strong> pueden ser frecuentes pero siempre deben ser confirmaciones basadas en unidades básicas de cambio o sea de preferencia cambios muy concretos y muy atómicos.</p>
+<p>Todos estos <strong>commits</strong> o puntos de guardado, van creando un historial a través del cual podemos ir registrando cada uno de l os cambios hechos a un proyecto. Todas estos <strong>commits</strong> incluyen también metadatos como un mensaje o título del <strong>commit</strong>, el autor, fecha, etc.</p>
+<p>Ejemplo de un <strong>commit</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "feat: add home page h1 title"</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Es posible agregar un comentario más explícito al <strong>commit,</strong> es necesario repetir la bandera <strong>-m</strong> y el mensaje extendido entre comillas. Ejemplo:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "feat: add home page h1 title"</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "this is an extended message to better explain the changes made"</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>💡 Es posible en caso de ser necesario, regresar a un <strong>commit</strong> anterior, pero con comandos como <strong>git revert, git rebase, git reset</strong> o <strong>git reflog</strong>. Hay que tener cuidado en utilizar estos comandos, de preferencia se usan en las ramas locales, no en las ramas sincronizadas al repositorio remoto (<strong>main</strong>, <strong>dev</strong>).</p>
+<br>
+<h4 id="git-remote">Git Remote</h4>
+<p>Muy ocasionalmente se usa este comando que administra el conjunto de orígenes remotos que se esta usando en el repositorio local.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> remote</span><span style="color:#79B8FF"> -v</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>💡 hay cuatro comandos que se comunican en el remoto <strong>git push, git clone, git pull, git fetch.</strong> Los describiremos más adelante.</p>
+<p><strong><em>Ramas y el Remoto</em></strong></p>
+<p>No confundir el concepto de ramas (<strong>branch</strong>) y remoto, digamos que las ramas pueden ser locales o remotas. Git hace seguimiento de ambas y en algún punto al sincronizar el proyecto, las ramas remotas estarán emparejadas con las ramas locales asociadas.</p>
+<p><strong><em>Seguimiento de ramas remotas</em></strong></p>
+<p><strong>git clone [url]</strong>: Clona (descarga) un repositorio que ya existe en GitHub u otra plataforma, incluidos todos los archivos, ramas y confirmaciones.
+<strong>git status:</strong> este comando te muestra en qué rama se encuentra, qué archivos están en el directorio de trabajo (<strong>stage</strong>) y alguna otra información que puede ser importante.
+<strong>git push</strong>: carga, empuja o sube todas las confirmaciones (<strong>commits</strong>) de la rama local en el repositorio remoto.
+<strong>git pull</strong>: actualiza, jala o trae a tu rama de trabajo local actual, todas las confirmaciones (<strong>commits</strong>) nuevos de la rama remota. Es una combinación de <strong>git fetch</strong> y <strong>git merge</strong>.</p>
+<br>
+<h4 id="git-status">Git Status</h4>
+<p>Muestra el estado actual de tu directorio de trabajo y de tu área de ensayo o <strong>stage</strong>. En caso de duda, es buena ida ver el estado del proyecto, este comando no modificará el proyecto, solo muestra información.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> status</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<p>Dentro de la información que proporciona <strong>git status</strong>, podemos ver:</p>
+<ul>
+<li>Qué <strong>commit</strong> está a la cabeza (HEAD).</li>
+<li>si hay archivos modificados que aun no se hayan agregado ( <strong>git add</strong> ) al <strong>stage.</strong></li>
+<li>Si la rama local actual esta desfasada de la remota.</li>
+<li>Si existen conflictos, <strong>git status</strong>, mostrará información relevante.</li>
+</ul>
+<br>
+<h4 id="git-pull">Git Pull</h4>
+<p><strong>git pull</strong> actualiza la rama de trabajo local y todas  las ramas que tienen seguimiento remoto.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> pull</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<p>💡 Este es uno de los comandos más utilizados y es buena práctica ejecutarlo diario para mantener al día nuestro repositorio local.</p>
+<br>
+<h4 id="git-push">Git Push</h4>
+<p><strong>git push</strong> carga, empuja, actualiza o sube todos los <strong>commits</strong> de las ramas locales a las ramas remotas correspondientes.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> push</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<p>💡 de forma predeterminada, <strong>git push</strong> solo actualiza la rama actual correspondiente, por lo que es bueno asegurarnos que estamos en la rama en la que hicimos cambios antes de empujar nuestros cambios.</p>
+<br>
+<h4 id="git-merge">Git Merge</h4>
+<p>Este comando es utilizado  para traer, unir o fusionar los últimos cambios de una rama (<strong>branch</strong>) a otra, por ejemplo de esa manera podemos llevar los cambios de la rama de desarrollo a una rama de producción.  Sirve para fusionar dos ramas y que esas ramas contengan la misma información.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> merge</span><span style="color:#9ECBFF"> dev</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<p>Para usar esta funcionalidad de Git, es necesario ubicarse en la rama destino, p.ej. “Main” o “Master” y desde ahi ejecutar el comando, indicando qué rama es que que queremos traer y fusionar a la rama destino.</p>
+<br>
+<h4 id="git-branch">Git Branch</h4>
+<p>Este comando gestiona las ramas, puedes listar las ramas que tienes, crear una rama nueva, cambiar de nombre.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> branch</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<br>
+<h4 id="git-checkout">Git Checkout</h4>
+<p>Este comando se usa para navegar entre ramas, revisar las actualizaciones de archivos en la rama de trabajo para que coincidan con la versión almacenada de la rama.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> checkout</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span></code></pre>
+<p><strong>git checkout</strong> funciona de la mano con <strong>git branch</strong> y también se puede crear una nueva rama con <strong>git checkout</strong> usando la bandera <strong>-b</strong>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">  username@user~MINGW64~/c/00-Proyectos</span></span>
+<span class="line"><span style="color:#B392F0">  $</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> checkout</span><span style="color:#79B8FF"> -b</span><span style="color:#9ECBFF"> ＜new-branch＞</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<hr>
+<br>
+<br>
+<h2 id="nomenclatura-buenas-prácticas">Nomenclatura (buenas prácticas)</h2>
+<br>
+<h3 id="nomenclatura-de-ramas">Nomenclatura de Ramas</h3>
+<p>Generalmente al inicializar un repositorio automáticamente se crea la rama principal o <strong>master</strong>, actualmente se está usando también el nombre de <strong>main,</strong>  para evitar términos como master - slave (amo - esclavo )</p>
+<p>Usaremos también una rama llamada <strong>develop</strong> o <strong>dev</strong> para nuestro ambiente de desarrollo,  pueden existir tantas ramas como necesitemos, en algunas ocaciones hay ramas para <strong>qa</strong> (control de calidad), etc.  Muchas veces vinculadas a los respectivos ambientes o entornos de trabajo (producción, desarrollo, qa, etc.).</p>
+<p><strong>Prefijo:</strong></p>
+<ul>
+<li><strong>add:</strong> Se generan una nuevas funcionalidades.</li>
+<li><strong>change:</strong> se realizan cambios sobre funcionalidades hechas.</li>
+<li><strong>fix:</strong> Se realizan corrección de Bugs reportados desde producción.</li>
+<li><strong>refactor:</strong> Refactorización de funcionalidades y mejoras.</li>
+<li><strong>delete:</strong> Se eliminan funciones o archivos.</li>
+<li><strong>doc:</strong> Se generar cambios en la documentación.</li>
+<li><strong>hotfix:</strong> Esta tipo se utiliza cuando prácticamente queremos introducir cambios directamente a la rama de producción.</li>
+</ul>
+<p><strong>Esquema:</strong></p>
+<p><strong>prefijo</strong> + <strong>/</strong> (barra invertida) + <strong>frase corta en camelCase</strong>  (todo sin espacios en blanco)</p>
+<br>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>add/endpointAsistentes </li>
+<li>change/loginForm</li>
+<li>doc/readmeFile</li>
+<li>fix/updateConfig</li>
+</ul>
+<p>Pueden notar que las ramas <strong>main</strong> y <strong>dev</strong> obviamente no cambian de nombre, pero cuando desarrollamos, en nuestro caso crearemos una rama a partir de <strong>dev</strong> y la nombraremos según el tipo de cambio que hagamos.</p>
+<br>
+<h3 id="nomenclatura-de-commits">Nomenclatura de commits</h3>
+<p>Escribir buenos mensajes de <strong>commit</strong> es importante para que el histórico de tu proyecto sea legible, fácilmente escaneable, claro y entendible por cualquier persona que participe en el proyecto.</p>
+<ol>
+<li>
+<p>Usar un <strong>prefijo</strong> en los <strong>commits</strong>  para hacerlos más semánticos seguido de dos puntos ( <strong>:</strong> )</p>
+<ul>
+<li><strong>feat</strong>: Una característica para el usuario.</li>
+<li><strong>fix</strong>: Arreglar un bug que afecta al usuario.</li>
+<li><strong>refactor</strong>: Refactorización del código como cambios de nombre de variables o funciones.</li>
+<li><strong>style</strong>: Cambios de formato, tabulaciones, espacios o puntos y coma, etc., que no afecten al usuario.</li>
+<li><strong>perf</strong>: Cambios que mejoran el rendimiento del sitio.</li>
+<li><strong>build</strong>: Cambios en el sistema de build, tareas de despliegue o instalación.</li>
+<li><strong>ci</strong>: Cambios en la integración continua.</li>
+<li><strong>docs</strong>: Cambios en la documentación.</li>
+<li><strong>test</strong>: Añade tests o refactoriza uno existente.</li>
+</ul>
+</li>
+<li>
+<p>Usar un <strong>verbo imperativo</strong></p>
+<ul>
+<li><strong>add</strong> nos indicará que se agregó uno o varios archivos o funciones.</li>
+<li><strong>change</strong> que se hicieron cambios en uno o más archivos o funciones.</li>
+<li><strong>remove</strong> nos indica que se quitó código inservible.</li>
+</ul>
+</li>
+<li>
+<p>No usar punto final ni puntos suspensivos en los mensajes de un <strong>commit</strong>.</p>
+</li>
+<li>
+<p>Se recomiendan mensajes cortos no más de 50 caracteres, mensaje claro, conciso. Para ello se recomienda hacer cambios atómicos, o sea no acumular muchos cambios de diferentes conceptos, y meterlos todos en un solo <strong>commit</strong> sino es muy recomendable dividirlos en varios <strong>commits</strong>.</p>
+</li>
+</ol>
+<p><strong>Esquema:</strong></p>
+<p><strong>prefijo:</strong> + <strong>verbo imperativo</strong> + <strong>mensaje conciso</strong></p>
+<br>
+<p><strong>Ejemplo:</strong>        feat: add new search field</p>
+<p>Nos indicaría que el <strong>commit</strong> se trata de una nueva funcionalidad (<strong>feature</strong>), en particular se agregó un campo de búsqueda.</p>
+<p><strong>Ejemplo práctico:</strong></p>
+<p>El cliente solicita cambios, y requiere una nueva imagen en un banner y un cambio en el tamaño de letra en un título particular.</p>
+<p><strong>Solución:</strong></p>
+<p>En este caso podríamos dividir nuestro desarrollo en dos <strong>commits</strong>, uno para el banner y otro para el cambio de estilo.  Quedando de la siguiente forma:</p>
+<ol>
+<li>feat: add new banner image</li>
+<li>style: change title font size</li>
+</ol>
+<p>De esta manera es muy fácil identificar en qué consistió cada uno de los commits.</p>
+<hr>
+<br>
+<br>
+<h2 id="ejercicios-prácticos">Ejercicios prácticos</h2>
+<br>
+<h3 id="iniciar-un-proyecto">Iniciar un proyecto</h3>
+<p>Se puede iniciar un proyecto de varias formas, por ejemplo:</p>
+<br>
+<h4 id="inicializar-un-proyecto-desde-la-terminal-git-bash">Inicializar un proyecto desde la terminal (git bash)</h4>
+<p><img alt="git-init-bash.gif"  src="/_astro/git-init-bash.efc6cdb8_Zqly6m.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<p>Observe como se crea automáticamente la rama <strong>master</strong> después de inicializar el repositorio.</p>
+<blockquote>
+<p>💡 La carpeta donde se inicializa el proyecto puede estar vacía o puede contener un desarrollo ya hecho.</p>
+</blockquote>
+<br>
+<h4 id="inicializar-un-proyecto-desde-vs-code">Inicializar un proyecto desde VS Code</h4>
+<p><img alt="git-init-vscode.gif"  src="/_astro/git-init-vscode.e224f93a_1tE98.webp" width="600" height="365" loading="lazy" decoding="async"></p>
+<p>Observa como al final se activan los iconos de Git  en  la parte inferior de VS Code, y automáticamente se crea la rama <strong>main.</strong> Si observaste bien, también con las extensiones de GitHub para VS Code puedes publicar directamente el  proyecto en un repositorio de GitHub.</p>
+<p>No te olvides descargar las extensiones recomendadas para VS Code.</p>
+<br>
+<h4 id="inicializar-un-proyecto-usando-git-tortoise">Inicializar un proyecto usando Git Tortoise</h4>
+<p><img alt="git-init-tortoise.gif"  src="/_astro/git-init-tortoise.44be1f74_ETpEK.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<blockquote>
+<p>💡 Observa como se crea la carpeta oculta .git después de inicializar el proyecto. Esta carpeta contiene toda la información que git necesita para funcionar. <strong>No debe borrarse nunca.</strong></p>
+</blockquote>
+<p>Si un proyecto no tiene esta carpeta es porque no está versionada con git.</p>
+<br>
+<br>
+<h3 id="clonar-un-repositorio-existente-de-github-en-tu-máquina-local">Clonar un repositorio existente de GitHub en tu máquina local</h3>
+<br>
+<h4 id="clonar-un-repositorio-existente-desde-la-terminal-git-bash">Clonar un repositorio existente desde la terminal (git Bash)</h4>
+<p><img alt="5_2_1.gif"  src="/_astro/5_2_1.68102234_OEGQs.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<blockquote>
+<p>💡 Observa como al clonar un repositorio en una carpeta, se crea una subcarpeta con el nombre del repositorio.</p>
+</blockquote>
+<br>
+<h4 id="clonar-un-repositorio-existente-desde-desde-vs-code">Clonar un repositorio existente desde desde VS Code</h4>
+<p><img alt="5_2_2.gif"  src="/_astro/5_2_2.fb727d06_Z2wdASm.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<br>
+<h4 id="clonar-un-repositorio-existente-usando-git-tortoise">Clonar un repositorio existente usando Git Tortoise</h4>
+<p><img alt="5_2_3.gif"  src="/_astro/5_2_3.cd3f17ef_Z1MIy6a.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<br>
+<br>
+<h3 id="crear-una-nueva-rama">Crear una nueva rama</h3>
+<p>En nuestro flujo diario no se trabajará sobre la rama <strong>main</strong> o <strong>master</strong>, ni sobre la rama <strong>dev</strong> sino que crearemos sub ramas a partir de <strong>dev</strong> para hacer nuestro desarrollo.</p>
+<p>La rama <strong>main</strong> o <strong>master</strong> es usada para el ambiente de producción y <strong>dev</strong> para el de desarrollo, nuestros cambios se harán creando sub ramas a partir de <strong>dev</strong> (ver <a href="#nomenclatura-de-ramas">Nomenclatura de Ramas</a> ) y es ahi donde se realizarán neustros cambios, para posterior mente llevar esos cambios a la rama <strong>dev</strong> y finalmente a  <strong>main o master</strong>.</p>
+<p><img alt="5_3.gif"  src="/_astro/5_3.4050281c_mAFJ2.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<br>
+<h3 id="añadir-cambios-a-una-rama--commit">Añadir cambios a una rama ( commit )</h3>
+<p><img alt="5_4.gif"  src="/_astro/5_4.e976b2df_zXLMM.webp" width="600" height="364" loading="lazy" decoding="async"></p>
+<blockquote>
+<p>💡 En este ejercicio, el pequeño cambio que se agrega, utiliz un editor incluido en la terminal (nano) pero puedes ser Vim, VSCode, o el de tu preferencia.</p>
+<p>Hecho el cambio, se agrega el archivo al <strong>stage</strong> con  <strong>git add .</strong>   y finalmente se realiza el <strong>commit</strong> con su respectivo mensaje ( ver  <a href="https://www.notion.so/Git-Gu-a-b-sica-c250f242b47c41ee895efcba7241b6ad?pvs=21">nomenclatura de commits</a> ).</p>
+</blockquote>
+<br>
+<br>
+<h3 id="fusionar-rama-hija-con-rama-padre-merge">Fusionar rama hija con rama padre (merge)</h3>
+<p>En este ejemplo vemos como para realizar un <strong>merge,</strong> y una vez hechos nuestros commits en la rama hija, debemos posicionarnos en la rama padre y desde ahi realizamos la fusión.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#B392F0">1.</span><span style="color:#79B8FF"> *</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">child</span><span style="color:#9ECBFF"> branch</span><span style="color:#E1E4E8">)</span><span style="color:#79B8FF">*</span><span style="color:#E1E4E8"> $ </span><span style="color:#9ECBFF">git</span><span style="color:#9ECBFF"> granch</span><span style="color:#9ECBFF"> dev</span><span style="color:#E1E4E8"> (enter)</span></span>
+<span class="line"><span style="color:#B392F0">2.</span><span style="color:#79B8FF"> *</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">dev</span><span style="color:#E1E4E8">)</span><span style="color:#79B8FF">*</span><span style="color:#E1E4E8"> $ </span><span style="color:#9ECBFF">git</span><span style="color:#9ECBFF"> merge</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">child</span><span style="color:#9ECBFF"> branc</span><span style="color:#E1E4E8">h</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span></code></pre>
+<blockquote>
+<p>💡 Note como primero hay que viajar a la rama padre (<strong>dev</strong>) y desde ahi invocar el comando <strong>merge</strong> para llevar los cambios de la rama hija a la rama padre.</p>
+</blockquote>
+<hr>
+<br>
+<br>
+<h2 id="git-workflow-para-jc-innovation">Git Workflow para JC-Innovation</h2>
+<br>
+<p>Una vez visto los fundamentos de Git y sus principales comandos ya podemos entender mejor como sería nuestro flujo de trabajo.</p>
+<p><img alt="Animación que representa el avance del flujo de trabajo propuesto con GIT para JC."  src="/_astro/git-workflow.f89b37f7_Z1Lkoek.webp" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>Animación que representa el avance del flujo de trabajo propuesto con GIT para JC.</p>
+<br>
+<h3 id="diagrama-general-del-flujo-de-trabajo-en-git-para-jc">Diagrama General del flujo de trabajo en GIT para JC</h3>
+<p><img alt="En este diagrama note que las flechas curvas representan la bifurcación de ramas, no confundir con otros esquemas en donde el sentido de las flechas representa al commit padre."  src="/_astro/Slide_4_3_-_18.73a980a0_Z2j1rEm.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>En este diagrama note que las flechas curvas representan la bifurcación de ramas, no confundir con otros esquemas en donde el sentido de las flechas representa al <strong>commit</strong> padre.</p>
+<br>
+<h3 id="1er-commit-en-main">1er commit en main</h3>
+<p><img alt="Al inicializar el repositorio la rama main es creada y en este caso hemos creado el primer commit (build: add init files), note que HEAD indiacará siempre cual es el punto de cambio o commit más adelantado en la línea del tiempo.l"  src="/_astro/Slide_4_3_-_17.fdd31e32_1OlbUA.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>Al inicializar el repositorio la rama <strong>main</strong> es creada y en este caso hemos creado el primer <strong>commit</strong> (<em>build: add init files</em>), note que <strong>HEAD</strong> indiacará siempre cual es el punto de cambio o <strong>commit</strong> más adelantado en la línea del tiempo.l</p>
+<br>
+<h3 id="creación-de-la-rama-dev-y-un-1er-commit-en-ella">Creación de la rama dev y un 1er commit en ella</h3>
+<p><img alt="Las ramas main y dev corresponden a los ambientes producción y desarrollo respectivamente, por lo que no se hcaen commit en ellas."  src="/_astro/Slide_4_3_-_16.f4a808f6_Z11g3vb.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>Las ramas <strong>main</strong> y <strong>dev</strong> corresponden a los ambientes <strong>producción</strong> y <strong>desarrollo</strong> respectivamente, por lo que no se hcaen commit en ellas.</p>
+<br>
+<h3 id="creación-de-subrama-de-dev-y-un-1er-commit-en-ella">Creación de subrama de dev y un 1er commit en ella</h3>
+<p><img alt="Este es el primer cambio de  desarrollo, por lo cual se crea una subrama de dev, es importante notar que la subrama add/loginForm solo existirá de manera local, no deberá sincronizarse con el repositorio remoto para evitar saturar de ramas el repositorio."  src="/_astro/Slide_4_3_-_15.e6fa62e6_1V1erA.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>Este es el primer cambio de  desarrollo, por lo cual se crea una subrama de <strong>dev</strong>, es importante notar que la subrama <strong>add/loginForm</strong> solo existirá de manera local, no deberá sincronizarse con el repositorio remoto para evitar saturar de ramas el repositorio.</p>
+<br>
+<h3 id="segundo-commit-en-subrama-de-dev">Segundo commit en subrama de dev</h3>
+<p><img alt="Segundo commit en la subrama add/loginForm, note como HEAD corresponde al último commit en la línea del tiempo, mientras que los commit en main y dev han quedado atrás."  src="/_astro/Slide_4_3_-_14.5962770a_E0zoo.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>Segundo <strong>commit</strong> en la subrama <strong>add/loginForm</strong>, note como HEAD corresponde al último <strong>commit</strong> en la línea del tiempo, mientras que los <strong>commit</strong> en <strong>main</strong> y <strong>dev</strong> han quedado atrás.</p>
+<br>
+<h3 id="merge-hacia-la-rama-dev-de-addloginform">Merge hacia la rama dev de add/loginForm</h3>
+<p><img alt="En este punto se ha creado un merge o sea una fusión, que llevará los cambios desde la subrama add/loginForm a la rama de dev.  En ese momento la rama dev hereda también los commits creados en la subrama add/loginForm y  en seguida de hacer el merge se debe sincronizar la rama dev  con el repositorio remoto, por lo que existirán dev y origin dev (remoto), ambas estarán emparejadas y tendrán la misma información."  src="/_astro/Slide_4_3_-_13.078a5010_2dVkSj.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<p>En este punto se ha creado un <strong>merge</strong> o sea una fusión, que llevará los cambios desde la subrama <strong>add/loginForm</strong> a la rama de <strong>dev</strong>.  En ese momento la rama <strong>dev</strong> hereda también los <strong>commits</strong> creados en la subrama <strong>add/loginForm y</strong>  en seguida de hacer el <strong>merge</strong> se debe sincronizar la rama <strong>dev</strong>  con el repositorio remoto, por lo que existirán <strong>dev</strong> y <strong>origin dev (remoto)</strong>, ambas estarán emparejadas y tendrán la misma información.</p>
+<br>
+<h3 id="nueva-subrama-de-dev-y-commit">Nueva subrama de dev y commit</h3>
+<p><img alt="Slide 4_3 - 12.svg"  src="/_astro/Slide_4_3_-_12.3f7d18e5_Z1Bvu3j.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<br>
+<h3 id="merge-hacia-dev-de-addhomepagestyles">Merge hacia dev de add/homePageStyles</h3>
+<p><img alt="Slide 4_3 - 11.svg"  src="/_astro/Slide_4_3_-_11.533408ca_Z1qYwHO.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<br>
+<h3 id="merge-de-dev-hacia-main">Merge de dev hacia main</h3>
+<p><img alt="Slide 4_3 - 10.svg"  src="/_astro/Slide_4_3_-_10.d0cfcceb_Z2jWNGO.svg" width="600" height="450" loading="lazy" decoding="async"></p>
+<br>
+<h2 id="guías-recomendadas">Guías recomendadas</h2>
+<p>Esta guía es un resumen de la guía oficial de gitHub, pero es muy recomendable también la guía de atlasian  y  por su puesto la documentación oficial de Git.</p>
+<ul>
+<li><a href="https://github.com/git-guides">Git (github.com)</a></li>
+<li><a href="https://docs.github.com/es/get-started/quickstart">Inicio rápido - Documentación de GitHub</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials">Git Tutorials and Training | Atlassian Git Tutorial</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">How to Create a Git Repository | Atlassian Git Tutorial</a></li>
+<li><a href="https://git-scm.com/doc">Git - Documentation (git-scm.com)</a></li>
+<li><a href="https://midu.dev/buenas-practicas-escribir-commits-git/">https://midu.dev/buenas-practicas-escribir-commits-git/</a></li>
+<li><a href="https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines">https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines</a></li>
+<li><a href="https://dev.to/konami12/recomendaciones-para-el-manejo-de-ramas-3hmi">https://dev.to/konami12/recomendaciones-para-el-manejo-de-ramas-3hmi</a></li>
+</ul>
+<!-- Scrip for make target blank  links  -->
+ <script src="https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js"></script></div></article></main><footer data-astro-cid-sz7xmlte>
+&copy; 2023 JC Innovation
+</footer></body></html>
