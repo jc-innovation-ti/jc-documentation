@@ -2,7 +2,7 @@
 title: 'Git'
 description: 'Una guía básica de Git para JC'
 pubDate: 'Oct 31 2023'
-heroImage: 'public/git/git-banner.png'
+heroImage: '/git/git-banner.png'
 ---
 
 # Contenido
