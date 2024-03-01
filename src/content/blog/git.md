@@ -2,7 +2,7 @@
 title: 'Git'
 description: 'Una guía básica de Git para JC'
 pubDate: 'Oct 31 2023'
-heroImage: '../../../public/git/git-banner.png'
+heroImage: 'public/git/git-banner.png'
 ---
 
 # Contenido
@@ -62,9 +62,10 @@ heroImage: '../../../public/git/git-banner.png'
 
 <br>
 
-**Hola**  
+**Hola**
 
->Bienvenido a este pequeño resumen sobre Git y su uso, cualquier comentario házmelo saber, espero te sirva como referencia y apoyo en el flujo de trabajo diario con Git. Gracias !
+> Bienvenido a este pequeño resumen sobre Git y su uso, cualquier comentario házmelo saber, espero te sirva como referencia y apoyo en el flujo de trabajo diario con Git. Gracias !
+
 ---
 
 <br>
@@ -76,7 +77,7 @@ heroImage: '../../../public/git/git-banner.png'
 
 - **Instalar Git en tu equipo de trabajo (windows):**
 
-    [Git - Downloading Package](https://git-scm.com/download/win) 
+  [Git - Downloading Package](https://git-scm.com/download/win)
 
 <br>
 
@@ -85,20 +86,14 @@ heroImage: '../../../public/git/git-banner.png'
 <br>
 
 - **Github Desktop:**
-    
-    [GitHub Desktop](https://desktop.github.com/)
-    
+  [GitHub Desktop](https://desktop.github.com/)
 - **Git Tortoise:**
-    
-    [Download – TortoiseGit – Windows Shell Interface to Git](https://tortoisegit.org/download/)
-    
+  [Download – TortoiseGit – Windows Shell Interface to Git](https://tortoisegit.org/download/)
 - **Extensiones para VS Code:**
-    
-    ![extensiones](../../../public/git/extensiones-0.png)
-    
-    ![extensiones](../../../public/git/extensiones-1.png)
-    
-    ![extensiones](../../../public/git/extensiones-2.png)
+  ![extensiones](../../../public/git/extensiones-0.png)
+  ![extensiones](../../../public/git/extensiones-1.png)
+  ![extensiones](../../../public/git/extensiones-2.png)
+
 ---
 
 <br>
@@ -144,7 +139,7 @@ Podremos crear una rama y trabajar sobre ella (rama de desarrollo) sin miedo a m
 
 ```
 
-**git init**  convierte al directorio actual en tu máquina local en un repositorio de Git. Es una manera de inicializar un proyecto en blanco.
+**git init** convierte al directorio actual en tu máquina local en un repositorio de Git. Es una manera de inicializar un proyecto en blanco.
 
 <br>
 
@@ -166,13 +161,13 @@ Cuando clonas un repositorio, obtienes toda la información de ese repositorio, 
 
 Generalmente se hace eso una sola vez al comenzar a interactuar con un proyecto iniciado que ya exista en un repositorio remoto, como en GitHub.
 
-<br> 
+<br>
 
 #### Git Add
 
 Este comando, agrega los archivos nuevos, o modificados en tu directorio de trabajo a una área llamada **stage** desde donde Git los reconocerá para poder agregar esos cambios a un punto de guardado o **commit**.
 
-Ejemplo de agregar un archivo al **stage*** para posteriormente realizar un punto de guardado o **commit.**
+Ejemplo de agregar un archivo al **stage\*** para posteriormente realizar un punto de guardado o **commit.**
 
 ```bash
 
@@ -192,16 +187,15 @@ Para agregar todos los archivos creados, modificados o borrados al área de **st
 
 ```
 
-
 💡 **git add** es un comando importante, ningún cambio se podrá guardar en el repositorio sino a través de este comando. También es posible agregar varios archivos o todos los archivos modificados, incluso cuando se eliminan archivos, **git add** prepara esa información para el posterior **commit.**
 
-<br> 
+<br>
 
 #### Git Commit
 
-**git commit** crea un punto de guardado, que es como una fotografía instantánea de todo un proyecto.  Se realizan cuando quieres agregar nuevos archivos o archivos modificados, eliminados, pero que consideres que es un cambio necesario y “estable” a incorporar a la rama actual de trabajo.  Estos puntos de guardado o **commits** pueden ser frecuentes pero siempre deben ser confirmaciones basadas en unidades básicas de cambio o sea de preferencia cambios muy concretos y muy atómicos.
+**git commit** crea un punto de guardado, que es como una fotografía instantánea de todo un proyecto. Se realizan cuando quieres agregar nuevos archivos o archivos modificados, eliminados, pero que consideres que es un cambio necesario y “estable” a incorporar a la rama actual de trabajo. Estos puntos de guardado o **commits** pueden ser frecuentes pero siempre deben ser confirmaciones basadas en unidades básicas de cambio o sea de preferencia cambios muy concretos y muy atómicos.
 
-Todos estos **commits** o puntos de guardado, van creando un historial a través del cual podemos ir registrando cada uno de l os cambios hechos a un proyecto. Todas estos **commits** incluyen también metadatos como un mensaje o título del **commit**, el autor, fecha, etc. 
+Todos estos **commits** o puntos de guardado, van creando un historial a través del cual podemos ir registrando cada uno de l os cambios hechos a un proyecto. Todas estos **commits** incluyen también metadatos como un mensaje o título del **commit**, el autor, fecha, etc.
 
 Ejemplo de un **commit**:
 
@@ -216,7 +210,7 @@ Ejemplo de un **commit**:
 Es posible agregar un comentario más explícito al **commit,** es necesario repetir la bandera **-m** y el mensaje extendido entre comillas. Ejemplo:
 
 ```bash
-  
+
   username@user~MINGW64~/c/00-Proyectos
   $ git commit -m "feat: add home page h1 title" -m "this is an extended message to better explain the changes made"
 
@@ -232,7 +226,7 @@ Es posible agregar un comentario más explícito al **commit,** es necesario rep
 Muy ocasionalmente se usa este comando que administra el conjunto de orígenes remotos que se esta usando en el repositorio local.
 
 ```bash
-  
+
   username@user~MINGW64~/c/00-Proyectos
   $ git remote -v
 
@@ -240,7 +234,6 @@ Muy ocasionalmente se usa este comando que administra el conjunto de orígenes r
 ```
 
 💡 hay cuatro comandos que se comunican en el remoto **git push, git clone, git pull, git fetch.** Los describiremos más adelante.
-
 
 **_Ramas y el Remoto_**
 
@@ -263,7 +256,7 @@ Muestra el estado actual de tu directorio de trabajo y de tu área de ensayo o *
 
   username@user~MINGW64~/c/00-Proyectos
   $ git status
- 
+
 ```
 
 Dentro de la información que proporciona **git status**, podemos ver:
@@ -277,15 +270,14 @@ Dentro de la información que proporciona **git status**, podemos ver:
 
 #### Git Pull
 
-**git pull** actualiza la rama de trabajo local y todas  las ramas que tienen seguimiento remoto. 
+**git pull** actualiza la rama de trabajo local y todas las ramas que tienen seguimiento remoto.
 
 ```bash
 
   username@user~MINGW64~/c/00-Proyectos
   $ git pull
- 
-```
 
+```
 
 💡 Este es uno de los comandos más utilizados y es buena práctica ejecutarlo diario para mantener al día nuestro repositorio local.
 
@@ -299,7 +291,7 @@ Dentro de la información que proporciona **git status**, podemos ver:
 
   username@user~MINGW64~/c/00-Proyectos
   $ git push
- 
+
 ```
 
 💡 de forma predeterminada, **git push** solo actualiza la rama actual correspondiente, por lo que es bueno asegurarnos que estamos en la rama en la que hicimos cambios antes de empujar nuestros cambios.
@@ -308,13 +300,13 @@ Dentro de la información que proporciona **git status**, podemos ver:
 
 #### Git Merge
 
-Este comando es utilizado  para traer, unir o fusionar los últimos cambios de una rama (**branch**) a otra, por ejemplo de esa manera podemos llevar los cambios de la rama de desarrollo a una rama de producción.  Sirve para fusionar dos ramas y que esas ramas contengan la misma información.
+Este comando es utilizado para traer, unir o fusionar los últimos cambios de una rama (**branch**) a otra, por ejemplo de esa manera podemos llevar los cambios de la rama de desarrollo a una rama de producción. Sirve para fusionar dos ramas y que esas ramas contengan la misma información.
 
 ```bash
 
   username@user~MINGW64~/c/00-Proyectos
   $ git merge dev
- 
+
 ```
 
 Para usar esta funcionalidad de Git, es necesario ubicarse en la rama destino, p.ej. “Main” o “Master” y desde ahi ejecutar el comando, indicando qué rama es que que queremos traer y fusionar a la rama destino.
@@ -329,7 +321,7 @@ Este comando gestiona las ramas, puedes listar las ramas que tienes, crear una r
 
   username@user~MINGW64~/c/00-Proyectos
   $ git branch
- 
+
 ```
 
 <br>
@@ -339,10 +331,10 @@ Este comando gestiona las ramas, puedes listar las ramas que tienes, crear una r
 Este comando se usa para navegar entre ramas, revisar las actualizaciones de archivos en la rama de trabajo para que coincidan con la versión almacenada de la rama.
 
 ```bash
-  
+
   username@user~MINGW64~/c/00-Proyectos
   $ git checkout
-  
+
 ```
 
 **git checkout** funciona de la mano con **git branch** y también se puede crear una nueva rama con **git checkout** usando la bandera **-b**.
@@ -351,7 +343,7 @@ Este comando se usa para navegar entre ramas, revisar las actualizaciones de arc
 
   username@user~MINGW64~/c/00-Proyectos
   $ git checkout -b ＜new-branch＞
- 
+
 ```
 
 ---
@@ -365,9 +357,9 @@ Este comando se usa para navegar entre ramas, revisar las actualizaciones de arc
 
 ### Nomenclatura de Ramas
 
-Generalmente al inicializar un repositorio automáticamente se crea la rama principal o **master**, actualmente se está usando también el nombre de **main,**  para evitar términos como master - slave (amo - esclavo )
+Generalmente al inicializar un repositorio automáticamente se crea la rama principal o **master**, actualmente se está usando también el nombre de **main,** para evitar términos como master - slave (amo - esclavo )
 
-Usaremos también una rama llamada **develop** o **dev** para nuestro ambiente de desarrollo,  pueden existir tantas ramas como necesitemos, en algunas ocaciones hay ramas para **qa** (control de calidad), etc.  Muchas veces vinculadas a los respectivos ambientes o entornos de trabajo (producción, desarrollo, qa, etc.).
+Usaremos también una rama llamada **develop** o **dev** para nuestro ambiente de desarrollo, pueden existir tantas ramas como necesitemos, en algunas ocaciones hay ramas para **qa** (control de calidad), etc. Muchas veces vinculadas a los respectivos ambientes o entornos de trabajo (producción, desarrollo, qa, etc.).
 
 **Prefijo:**
 
@@ -379,15 +371,15 @@ Usaremos también una rama llamada **develop** o **dev** para nuestro ambiente d
 - **doc:** Se generar cambios en la documentación.
 - **hotfix:** Esta tipo se utiliza cuando prácticamente queremos introducir cambios directamente a la rama de producción.
 
-**Esquema:**    
+**Esquema:**
 
- **prefijo** + **/** (barra invertida) + **frase corta en camelCase**  (todo sin espacios en blanco)
+**prefijo** + **/** (barra invertida) + **frase corta en camelCase** (todo sin espacios en blanco)
 
 <br>
 
 **Ejemplos:**
 
-- add/endpointAsistentes        
+- add/endpointAsistentes
 - change/loginForm
 - doc/readmeFile
 - fix/updateConfig
@@ -400,39 +392,37 @@ Pueden notar que las ramas **main** y **dev** obviamente no cambian de nombre, p
 
 Escribir buenos mensajes de **commit** es importante para que el histórico de tu proyecto sea legible, fácilmente escaneable, claro y entendible por cualquier persona que participe en el proyecto.
 
-1. Usar un **prefijo** en los **commits**  para hacerlos más semánticos seguido de dos puntos ( **:** )
+1. Usar un **prefijo** en los **commits** para hacerlos más semánticos seguido de dos puntos ( **:** )
 
-    
-    - **feat**: Una característica para el usuario.
-    - **fix**: Arreglar un bug que afecta al usuario.
-    - **refactor**: Refactorización del código como cambios de nombre de variables o funciones.
-    - **style**: Cambios de formato, tabulaciones, espacios o puntos y coma, etc., que no afecten al usuario.
-    - **perf**: Cambios que mejoran el rendimiento del sitio.
-    - **build**: Cambios en el sistema de build, tareas de despliegue o instalación.
-    - **ci**: Cambios en la integración continua.
-    - **docs**: Cambios en la documentación.
-    - **test**: Añade tests o refactoriza uno existente.
-    
+   - **feat**: Una característica para el usuario.
+   - **fix**: Arreglar un bug que afecta al usuario.
+   - **refactor**: Refactorización del código como cambios de nombre de variables o funciones.
+   - **style**: Cambios de formato, tabulaciones, espacios o puntos y coma, etc., que no afecten al usuario.
+   - **perf**: Cambios que mejoran el rendimiento del sitio.
+   - **build**: Cambios en el sistema de build, tareas de despliegue o instalación.
+   - **ci**: Cambios en la integración continua.
+   - **docs**: Cambios en la documentación.
+   - **test**: Añade tests o refactoriza uno existente.
+
 2. Usar un **verbo imperativo**
 
-    - **add** nos indicará que se agregó uno o varios archivos o funciones.
-    - **change** que se hicieron cambios en uno o más archivos o funciones.
-    - **remove** nos indica que se quitó código inservible.
+   - **add** nos indicará que se agregó uno o varios archivos o funciones.
+   - **change** que se hicieron cambios en uno o más archivos o funciones.
+   - **remove** nos indica que se quitó código inservible.
 
 3. No usar punto final ni puntos suspensivos en los mensajes de un **commit**.
 
-1. Se recomiendan mensajes cortos no más de 50 caracteres, mensaje claro, conciso. Para ello se recomienda hacer cambios atómicos, o sea no acumular muchos cambios de diferentes conceptos, y meterlos todos en un solo **commit** sino es muy recomendable dividirlos en varios **commits**.
+4. Se recomiendan mensajes cortos no más de 50 caracteres, mensaje claro, conciso. Para ello se recomienda hacer cambios atómicos, o sea no acumular muchos cambios de diferentes conceptos, y meterlos todos en un solo **commit** sino es muy recomendable dividirlos en varios **commits**.
 
-**Esquema:**     
+**Esquema:**
 
 **prefijo:** + **verbo imperativo** + **mensaje conciso**
 
 <br>
 
-**Ejemplo:**        feat: add new search field
+**Ejemplo:** feat: add new search field
 
 Nos indicaría que el **commit** se trata de una nueva funcionalidad (**feature**), en particular se agregó un campo de búsqueda.
-
 
 **Ejemplo práctico:**
 
@@ -440,7 +430,7 @@ El cliente solicita cambios, y requiere una nueva imagen en un banner y un cambi
 
 **Solución:**
 
-En este caso podríamos dividir nuestro desarrollo en dos **commits**, uno para el banner y otro para el cambio de estilo.  Quedando de la siguiente forma:
+En este caso podríamos dividir nuestro desarrollo en dos **commits**, uno para el banner y otro para el cambio de estilo. Quedando de la siguiente forma:
 
 1. feat: add new banner image
 2. style: change title font size
@@ -468,7 +458,7 @@ Se puede iniciar un proyecto de varias formas, por ejemplo:
 
 Observe como se crea automáticamente la rama **master** después de inicializar el repositorio.
 
->💡 La carpeta donde se inicializa el proyecto puede estar vacía o puede contener un desarrollo ya hecho.
+> 💡 La carpeta donde se inicializa el proyecto puede estar vacía o puede contener un desarrollo ya hecho.
 
 <br>
 
@@ -476,7 +466,7 @@ Observe como se crea automáticamente la rama **master** después de inicializar
 
 ![git-init-vscode.gif](../../../public/git/git-init-vscode.gif)
 
-Observa como al final se activan los iconos de Git  en  la parte inferior de VS Code, y automáticamente se crea la rama **main.** Si observaste bien, también con las extensiones de GitHub para VS Code puedes publicar directamente el  proyecto en un repositorio de GitHub.
+Observa como al final se activan los iconos de Git en la parte inferior de VS Code, y automáticamente se crea la rama **main.** Si observaste bien, también con las extensiones de GitHub para VS Code puedes publicar directamente el proyecto en un repositorio de GitHub.
 
 No te olvides descargar las extensiones recomendadas para VS Code.
 
@@ -486,7 +476,7 @@ No te olvides descargar las extensiones recomendadas para VS Code.
 
 ![git-init-tortoise.gif](../../../public/git/git-init-tortoise.gif)
 
->💡 Observa como se crea la carpeta oculta .git después de inicializar el proyecto. Esta carpeta contiene toda la información que git necesita para funcionar. **No debe borrarse nunca.**
+> 💡 Observa como se crea la carpeta oculta .git después de inicializar el proyecto. Esta carpeta contiene toda la información que git necesita para funcionar. **No debe borrarse nunca.**
 
 Si un proyecto no tiene esta carpeta es porque no está versionada con git.
 
@@ -501,7 +491,7 @@ Si un proyecto no tiene esta carpeta es porque no está versionada con git.
 
 ![5_2_1.gif](../../../public/git/5_2_1.gif)
 
->💡 Observa como al clonar un repositorio en una carpeta, se crea una subcarpeta con el nombre del repositorio.
+> 💡 Observa como al clonar un repositorio en una carpeta, se crea una subcarpeta con el nombre del repositorio.
 
 <br>
 
@@ -522,7 +512,7 @@ Si un proyecto no tiene esta carpeta es porque no está versionada con git.
 
 En nuestro flujo diario no se trabajará sobre la rama **main** o **master**, ni sobre la rama **dev** sino que crearemos sub ramas a partir de **dev** para hacer nuestro desarrollo.
 
-La rama **main** o **master** es usada para el ambiente de producción y **dev** para el de desarrollo, nuestros cambios se harán creando sub ramas a partir de **dev** (ver [Nomenclatura de Ramas](#nomenclatura-de-ramas) ) y es ahi donde se realizarán neustros cambios, para posterior mente llevar esos cambios a la rama **dev** y finalmente a  **main o master**.
+La rama **main** o **master** es usada para el ambiente de producción y **dev** para el de desarrollo, nuestros cambios se harán creando sub ramas a partir de **dev** (ver [Nomenclatura de Ramas](#nomenclatura-de-ramas) ) y es ahi donde se realizarán neustros cambios, para posterior mente llevar esos cambios a la rama **dev** y finalmente a **main o master**.
 
 ![5_3.gif](../../../public/git/5_3.gif)
 
@@ -532,9 +522,9 @@ La rama **main** o **master** es usada para el ambiente de producción y **dev**
 
 ![5_4.gif](../../../public/git/5_4.gif)
 
->💡 En este ejercicio, el pequeño cambio que se agrega, utiliz un editor incluido en la terminal (nano) pero puedes ser Vim, VSCode, o el de tu preferencia. 
+> 💡 En este ejercicio, el pequeño cambio que se agrega, utiliz un editor incluido en la terminal (nano) pero puedes ser Vim, VSCode, o el de tu preferencia.
 >
->Hecho el cambio, se agrega el archivo al **stage** con  **git add .**   y finalmente se realiza el **commit** con su respectivo mensaje ( ver  [nomenclatura de commits](https://www.notion.so/Git-Gu-a-b-sica-c250f242b47c41ee895efcba7241b6ad?pvs=21) ).
+> Hecho el cambio, se agrega el archivo al **stage** con **git add .** y finalmente se realiza el **commit** con su respectivo mensaje ( ver [nomenclatura de commits](https://www.notion.so/Git-Gu-a-b-sica-c250f242b47c41ee895efcba7241b6ad?pvs=21) ).
 
 <br>
 <br>
@@ -547,10 +537,10 @@ En este ejemplo vemos como para realizar un **merge,** y una vez hechos nuestros
 
 1. *(child branch)* $ git granch dev (enter)
 2. *(dev)* $ git merge <child branch>
- 
+
 ```
 
->💡 Note como primero hay que viajar a la rama padre (**dev**) y desde ahi invocar el comando **merge** para llevar los cambios de la rama hija a la rama padre.
+> 💡 Note como primero hay que viajar a la rama padre (**dev**) y desde ahi invocar el comando **merge** para llevar los cambios de la rama hija a la rama padre.
 
 ---
 
@@ -581,7 +571,7 @@ En este diagrama note que las flechas curvas representan la bifurcación de rama
 
 ![Al inicializar el repositorio la rama **main** es creada y en este caso hemos creado el primer **commit** (*build: add init files*), note que **HEAD** indiacará siempre cual es el punto de cambio o **commit** más adelantado en la línea del tiempo.l](../../../public/git/Slide_4_3_-_17.svg)
 
-Al inicializar el repositorio la rama **main** es creada y en este caso hemos creado el primer **commit** (*build: add init files*), note que **HEAD** indiacará siempre cual es el punto de cambio o **commit** más adelantado en la línea del tiempo.l
+Al inicializar el repositorio la rama **main** es creada y en este caso hemos creado el primer **commit** (_build: add init files_), note que **HEAD** indiacará siempre cual es el punto de cambio o **commit** más adelantado en la línea del tiempo.l
 
 <br>
 
@@ -597,7 +587,7 @@ Las ramas **main** y **dev** corresponden a los ambientes **producción** y **de
 
 ![Este es el primer cambio de  desarrollo, por lo cual se crea una subrama de **dev**, es importante notar que la subrama **add/loginForm** solo existirá de manera local, no deberá sincronizarse con el repositorio remoto para evitar saturar de ramas el repositorio.](../../../public/git/Slide_4_3_-_15.svg)
 
-Este es el primer cambio de  desarrollo, por lo cual se crea una subrama de **dev**, es importante notar que la subrama **add/loginForm** solo existirá de manera local, no deberá sincronizarse con el repositorio remoto para evitar saturar de ramas el repositorio.
+Este es el primer cambio de desarrollo, por lo cual se crea una subrama de **dev**, es importante notar que la subrama **add/loginForm** solo existirá de manera local, no deberá sincronizarse con el repositorio remoto para evitar saturar de ramas el repositorio.
 
 <br>
 
@@ -613,7 +603,7 @@ Segundo **commit** en la subrama **add/loginForm**, note como HEAD corresponde a
 
 ![En este punto se ha creado un **merge** o sea una fusión, que llevará los cambios desde la subrama **add/loginForm** a la rama de **dev**.  En ese momento la rama **dev** hereda también los **commits** creados en la subrama **add/loginForm y**  en seguida de hacer el **merge** se debe sincronizar la rama **dev**  con el repositorio remoto, por lo que existirán **dev** y **origin dev (remoto)**, ambas estarán emparejadas y tendrán la misma información.](../../../public/git/Slide_4_3_-_13.svg)
 
-En este punto se ha creado un **merge** o sea una fusión, que llevará los cambios desde la subrama **add/loginForm** a la rama de **dev**.  En ese momento la rama **dev** hereda también los **commits** creados en la subrama **add/loginForm y**  en seguida de hacer el **merge** se debe sincronizar la rama **dev**  con el repositorio remoto, por lo que existirán **dev** y **origin dev (remoto)**, ambas estarán emparejadas y tendrán la misma información.
+En este punto se ha creado un **merge** o sea una fusión, que llevará los cambios desde la subrama **add/loginForm** a la rama de **dev**. En ese momento la rama **dev** hereda también los **commits** creados en la subrama **add/loginForm y** en seguida de hacer el **merge** se debe sincronizar la rama **dev** con el repositorio remoto, por lo que existirán **dev** y **origin dev (remoto)**, ambas estarán emparejadas y tendrán la misma información.
 
 <br>
 
@@ -637,7 +627,7 @@ En este punto se ha creado un **merge** o sea una fusión, que llevará los camb
 
 ## Guías recomendadas
 
-Esta guía es un resumen de la guía oficial de gitHub, pero es muy recomendable también la guía de atlasian  y  por su puesto la documentación oficial de Git.
+Esta guía es un resumen de la guía oficial de gitHub, pero es muy recomendable también la guía de atlasian y por su puesto la documentación oficial de Git.
 
 - [Git (github.com)](https://github.com/git-guides)
 - [Inicio rápido - Documentación de GitHub](https://docs.github.com/es/get-started/quickstart)
@@ -647,9 +637,6 @@ Esta guía es un resumen de la guía oficial de gitHub, pero es muy recomendable
 - [https://midu.dev/buenas-practicas-escribir-commits-git/](https://midu.dev/buenas-practicas-escribir-commits-git/)
 - [https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 - [https://dev.to/konami12/recomendaciones-para-el-manejo-de-ramas-3hmi](https://dev.to/konami12/recomendaciones-para-el-manejo-de-ramas-3hmi)
-
-
-
 
 <!-- Scrip for make target blank  links  -->
  <script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
